@@ -1,0 +1,160 @@
+html {
+    font-family: "Exo 2";
+}
+
+.legues-cont {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.3rem;
+    flex-wrap: wrap;
+}
+
+.add-player {
+    display: none;
+}
+
+.legue1 tr:nth-child(2) {
+    background-color: gold;
+}
+
+th {
+    font-family: "Rubik Glitch";
+    font-size: 1.8rem;
+    height: 50px;
+}
+
+tr:nth-child(2),
+tr:nth-child(3) {
+    background-color: rgb(79, 211, 79);
+}
+
+tr:nth-child(14),
+tr:nth-child(15) {
+    background-color: red;
+}
+
+.legue1,
+.legue1 td,
+.legue1 tr {
+    border: 3px solid rgb(216, 178, 81);
+    border-collapse: collapse;
+}
+
+.legue2,
+.legue2 td,
+.legue2 tr {
+    border: 3px solid silver;
+    border-collapse: collapse;
+}
+
+.legue3,
+.legue3 td,
+.legue3 tr {
+    border: 3px solid rgb(205, 127, 50);
+    border-collapse: collapse;
+}
+
+.name {
+    width: 200px;
+    height: 50px;
+}
+
+.points {
+    text-align: center;
+    width: 70px;
+    height: 50px;
+}
+
+button {
+    padding: 10px 20px;
+}
+
+input {
+    padding: 10px 20px
+}
+
+.end-display {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    width: 70%;
+    height: 700px;
+    background-color: darkseagreen;
+    border-radius: 5px;
+    margin: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.legues-bilanz {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.end-display .header {
+    font-size: 2rem;
+}
+
+.end-display .first-legue {
+    display: flex;
+    flex-direction: column;
+}
+
+.winner,
+.relegated {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.close-end-display,
+.close-info-square {
+    position: absolute;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    background-color: transparent;
+    transition: all 0.15s;
+}
+
+.close-end-display,
+.close-info-square:hover {
+    .close-svg path {
+        stroke: red;
+    }
+}
+
+.next-season-btn {
+    display: none;
+}
+
+.info-square {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: gray;
+    width: 300px;
+    height: 200px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 10px;
+}
+
+.info-square p {
+    margin-left: 25px;
+}
+
+.info-square .header {
+    align-self: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0;
+}

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="normalize.css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Rubik+Glitch&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="endDisplay" class="end-display">
+        <button class="close-end-display" id="closeEndDisplay">
+            <svg class="close-svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z"
+                    stroke="#1C274C" stroke-width="1.5" />
+                <path d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5" stroke="#1C274C" stroke-width="1.5"
+                    stroke-linecap="round" />
+            </svg>
+        </button>
+        <center>
+            <p class="header">End of the season!</p>
+        </center>
+        <div class="legues-bilanz">
+            <div class="first-legue">
+                <p>legue 1:</p>
+                <div class="winner">
+                    <img src="icons/winner.svg" alt="">
+                    <p class="winner-team" id="winner1">Winner</p>
+                </div>
+                <div class="relegated">
+                    <svg width="30px" height="30px" viewBox="0 0 1024 1024" class="icon" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z"
+                            fill="darkred" />
+                    </svg>
+                    <p class="rel-team" id="rel1">Looser</p>
+                </div>
+            </div>
+            <div class="second-legue">
+                <p>legue 2:</p>
+                <div class="winner">
+                    <img src="icons/up-arrow.svg" alt="">
+                    <p class="winner-team" id="prom2">Winner</p>
+                </div>
+                <div class="relegated">
+                    <svg width="30px" height="30px" viewBox="0 0 1024 1024" class="icon" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z"
+                            fill="darkred" />
+                    </svg>
+                    <p class="rel-team" id="rel2">Looser</p>
+                </div>
+            </div>
+            <div class="third-legue">
+                <p>legue 3:</p>
+                <div class="winner">
+                    <img src="icons/up-arrow.svg" alt="">
+                    <p class="winner-team" id="prom3">Winner</p>
+                </div>
+                <div class="relegated">
+                    <svg width="30px" height="30px" viewBox="0 0 1024 1024" class="icon" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z"
+                            fill="darkred" />
+                    </svg>
+                    <p class="rel-team" id="rel3">Looser</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="addPlayerBtn">add Player</button>
+    <div class="add-player" id="addPlayerCont">
+        <input type="text" id="playerName" class="player-name" placeholder="team-name">
+        <button id="finalAdd">add</button>
+    </div>
+    <button id="startBtn">start!</button>
+    <div class="info-square" id="infoSquare">
+        <button class="close-info-square" id="closeInfoSquare">
+            <svg class="close-svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z"
+                    stroke="#1C274C" stroke-width="1.5" />
+                <path d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5" stroke="#1C274C" stroke-width="1.5"
+                    stroke-linecap="round" />
+            </svg>
+        </button>
+        <p class="header">Team info</p>
+        <p id="nameField">Name:</p>
+        <p id="lvlField">Level:</p>
+        <p id="titlesField">Titles:</p>
+    </div>
+    <div class="legues-cont">
+        <table class="legue1">
+            <tr>
+                <th>Legue 1</th>
+            </tr>
+            <tr class="place">
+                <td class="name" data-l="1"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place">
+                <td class="name" data-l="1"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place">
+                <td class="name" data-l="1"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place">
+                <td class="name" data-l="1"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place">
+                <td class="name" data-l="1"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place">
+                <td class="name" data-l="1"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place">
+                <td class="name" data-l="1"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place">
+                <td class="name" data-l="1"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place">
+                <td class="name" data-l="1"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place">
+                <td class="name" data-l="1"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place">
+                <td class="name" data-l="1"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place">
+                <td class="name" data-l="1"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place">
+                <td class="name" data-l="1"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place">
+                <td class="name" data-l="1"></td>
+                <td class="points"></td>
+            </tr>
+        </table>
+        <table class="legue2">
+            <tr>
+                <th>legue 2</th>
+            </tr>
+            <tr class="place2">
+                <td class="name" data-l="2"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place2">
+                <td class="name" data-l="2"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place2">
+                <td class="name" data-l="2"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place2">
+                <td class="name" data-l="2"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place2">
+                <td class="name" data-l="2"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place2">
+                <td class="name" data-l="2"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place2">
+                <td class="name" data-l="2"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place2">
+                <td class="name" data-l="2"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place2">
+                <td class="name" data-l="2"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place2">
+                <td class="name" data-l="2"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place2">
+                <td class="name" data-l="2"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place2">
+                <td class="name" data-l="2"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place2">
+                <td class="name" data-l="2"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place2">
+                <td class="name" data-l="2"></td>
+                <td class="points"></td>
+            </tr>
+        </table>
+        <table class="legue3">
+            <tr>
+                <th>legue 3</th>
+            </tr>
+            <tr class="place3">
+                <td class="name" data-l="3"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place3">
+                <td class="name" data-l="3"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place3">
+                <td class="name" data-l="3"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place3">
+                <td class="name" data-l="3"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place3">
+                <td class="name" data-l="3"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place3">
+                <td class="name" data-l="3"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place3">
+                <td class="name" data-l="3"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place3">
+                <td class="name" data-l="3"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place3">
+                <td class="name" data-l="3"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place3">
+                <td class="name" data-l="3"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place3">
+                <td class="name" data-l="3"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place3">
+                <td class="name" data-l="3"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place3">
+                <td class="name" data-l="3"></td>
+                <td class="points"></td>
+            </tr>
+            <tr class="place3">
+                <td class="name" data-l="3"></td>
+                <td class="points"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="playerPointsCont">
+
+    </div>
+    <button id="playRoundBtn">simulate Round!</button>
+    <button id="nxtSsnBtn" class="next-season-btn">next Season</button>
+    <script src="main.js"></script>
+</body>
+
+</html>
